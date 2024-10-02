@@ -9,10 +9,13 @@ import util.printUtil;
 public class Player {
     private int keyCount;
     private Room currentRoom;
-
-    public Player(Room startRoom) {
+    private int hp; 
+    private int damage; 
+    public Player(Room startRoom, int damage, int hp) {
         this.keyCount = 0;
         this.currentRoom = startRoom;
+        this.hp = hp; 
+        this.damage = damage;
     }
     public ObjectManager getObjectManager(){
         return currentRoom.getObjectManager();
@@ -99,7 +102,14 @@ public class Player {
     public int incrementKey() {
         return keyCount++;
     }
-    
+
+    public void takeDamage(int amount) {
+        this.hp -= amount;
+    }
+    public boolean isAlive(){
+        return hp > 0; 
+    }
+
     public void go(String roomName,ArrayList<Room> rooms) {
         for (Room room : rooms){
             if (room.getName().equalsIgnoreCase(roomName)) {

@@ -20,7 +20,7 @@ public class Game {
     public Game() {
         this.rooms = new ArrayList<>();
         setupRooms();
-        this.player = new Player(currentRoom);
+        this.player = new Player(currentRoom, 200, 50);
         this.scanner = new Scanner(System.in);
         this.friendlyGhost = new FriendlyGhost(this);
     }

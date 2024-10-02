@@ -17,7 +17,7 @@ public class FriendlyGhost extends Npc {
         this.random = new Random();
     }
     public void showMenu() {
-        boolean showMenu = true; 
+        boolean showMenu = true;
         printUtil.typeWriter(printUtil.GameMessages.NPC_GHOST_HELP.getMessage());
         while(showMenu) {
             System.out.println("""
