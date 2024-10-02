@@ -1,4 +1,4 @@
-package game;
+package room;
 
 import util.GameObject;
 public class Hall extends Room {

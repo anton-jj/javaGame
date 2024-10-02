@@ -15,17 +15,12 @@ public class ObjectManager {
     public List<GameObject> getObjects(){
         return objects;
     }
-
-    // returnerar object som matchar det angivna namnet från string eller null om
-    // inte hittar något
     public GameObject objectsbyName(String name) {
-        // kollar efete r ett objekt med det angivna nmanet
         for (GameObject obj : objects) {
             if (obj.getName().equalsIgnoreCase(name)) {
                 return obj;
             }
         }
-        // om inget hittas returneara null
         return null;
     }
 }

@@ -3,8 +3,13 @@ package game;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import player.FriendlyGhost;
+import npc.FriendlyGhost;
 import player.Player;
+import room.Hall;
+import room.Kitchen;
+import room.LivingRoom;
+import room.Room;
+import room.WashRoom;
 
 public class Game {
     private final Player player;
@@ -15,7 +20,7 @@ public class Game {
     public Game() {
         this.rooms = new ArrayList<>();
         setupRooms();
-        this.player = new Player(currentRoom);
+        this.player = new Player(currentRoom, 200, 50);
         this.scanner = new Scanner(System.in);
         this.friendlyGhost = new FriendlyGhost(this);
     }
