@@ -3,8 +3,13 @@ package game;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import player.FriendlyGhost;
+import npc.FriendlyGhost;
 import player.Player;
+import room.Hall;
+import room.Kitchen;
+import room.LivingRoom;
+import room.Room;
+import room.WashRoom;
 
 public class Game {
     private final Player player;

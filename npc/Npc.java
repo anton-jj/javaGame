@@ -1,4 +1,4 @@
-package player;
+package npc;
 
 public  abstract class Npc {
     private String name;

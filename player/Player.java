@@ -2,7 +2,7 @@ package player;
 
 import java.util.ArrayList;
 
-import game.Room;
+import room.Room;
 import util.GameObject;
 import util.ObjectManager;
 import util.printUtil;

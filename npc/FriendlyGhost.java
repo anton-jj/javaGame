@@ -1,10 +1,10 @@
-package player;
+package npc;
 
 import java.util.Random;
 import java.util.Scanner;
 
 import game.Game;
-import game.Room;
+import room.Room;
 import util.printUtil;
 
 public class FriendlyGhost extends Npc {

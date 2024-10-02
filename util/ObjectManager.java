@@ -15,7 +15,6 @@ public class ObjectManager {
     public List<GameObject> getObjects(){
         return objects;
     }
-
     public GameObject objectsbyName(String name) {
         for (GameObject obj : objects) {
             if (obj.getName().equalsIgnoreCase(name)) {
