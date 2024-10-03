@@ -107,7 +107,7 @@ public class Player {
         this.hp -= amount;
     }
     public boolean isAlive(){
-        return hp > 0; 
+        return hp > 0;
     }
 
     public void go(String roomName,ArrayList<Room> rooms) {
