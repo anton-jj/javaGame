@@ -19,6 +19,7 @@ public class FriendlyGhost extends Npc {
     public void showMenu() {
         boolean showMenu = true;
         printUtil.typeWriter(printUtil.GameMessages.NPC_GHOST_HELP.getMessage());
+        printUtil.typeWriter(printUtil.AsciiArt.GHOST_ASCII.getArt());
         while(showMenu) {
             System.out.println("""
                     What would you like to do?

@@ -56,15 +56,19 @@ public class Player {
     public void search(String objectName) {
         ObjectManager objectManager = currentRoom.getObjectManager();
         GameObject obj = objectManager.objectsbyName(objectName);
-        
+
         if (obj == null) {
             System.out.println("Invalid object");
             return;
         }
-        if(!obj.getOpen()) {
+
+        if(obj.isOpenable()) {
             System.out.println("try open");
             return;
         }
+
+        System.out.println(obj.interact());
+         
         if (obj.hasItem()) {
             System.out.println("Items found at " + obj.getName() + ": ");
             for(Item item : obj.getItems()) {
@@ -83,16 +87,19 @@ public class Player {
             System.out.println("Input valid object");
             return;
         }
-        if (obj.getOpen()) {
-            System.out.println(obj.getOpen());
+
+        if (!obj.isOpenable()) {
+            System.out.println(obj.isOpenable());
             System.out.println("sorry try search?");
             return;
         }
 
+        System.out.println(obj.interact()); 
+
         if (obj.hasItem()) {
             System.out.println("Inside the " + obj.getName() + " you found " );
             for (Item item : obj.getItems()){
-                System.out.println("-" + item.getName());                
+                System.out.println("-" + item.getName());
             }
         } else {
             System.out.println("there is nothing at " + obj.getName());

@@ -8,17 +8,19 @@ public class GameObject {
     String name;
     private List<Item> items; 
     boolean visableKey;
-    boolean open;
+    boolean openAble;
+    private String asciiArt;
     
 
-    public GameObject(String name, boolean open) {
-        this.open = open;
+    public GameObject(String asciiArt, String name, boolean openAble) {
+        this.openAble = openAble;
         this.name = name;
         this.items = new ArrayList<>();
+        this.asciiArt = asciiArt;
     }
 
-    public boolean getOpen(){
-        return open;
+    public boolean isOpenable(){
+        return openAble;
     }
 
     public String getName() {
@@ -40,6 +42,10 @@ public class GameObject {
             }
         }
         return null;
+    }
+    
+    public String interact(){
+     return asciiArt;
     }
 
     public boolean hasItem() {

@@ -1,6 +1,7 @@
 package room;
 
 import util.GameObject;
+import util.printUtil;
 
 public class LivingRoom  extends Room{
     public LivingRoom(){
@@ -9,8 +10,10 @@ public class LivingRoom  extends Room{
 
     @Override
     protected void createObjects(){
-        getObjectManager().addObject(new GameObject("table",  false));
-        getObjectManager().addObject(new GameObject("couch",  false));
-        getObjectManager().addObject(new GameObject("lamp",  false));
+        GameObject sofa = new GameObject(printUtil.AsciiArt.SOFA_ASCII.getArt(), "sofa", false);
+        GameObject table = new GameObject(printUtil.AsciiArt.TABLE_ASCII.getArt(), "table", false);
+        
+        objectManager.addObject(table);
+        objectManager.addObject(sofa);
     }
 }
