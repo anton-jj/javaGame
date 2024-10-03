@@ -1,15 +1,19 @@
 package room;
 
 import util.GameObject;
-
+import util.printUtil;
+import item.Key;
 public class WashRoom extends Room{
     public WashRoom(){
         super(RoomName.WASH_ROOM);
     }
     @Override
     protected void createObjects(){
-        getObjectManager().addObject(new GameObject("taoilet", false, true));
-        getObjectManager().addObject(new GameObject("mirror", false, false));
-        getObjectManager().addObject(new GameObject("shower", false, false));
+        GameObject mirror = new GameObject(printUtil.AsciiArt.MIRROR_ASCII.getArt(), "mirror", false);
+        GameObject shower = new GameObject(printUtil.AsciiArt.SHOWER_ASCII.getArt(), "shower", false);
+        objectManager.addObject(mirror);
+        objectManager.addObject(shower);
+        Key key = new Key();
+        mirror.addItem(key);
     }
 }

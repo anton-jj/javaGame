@@ -1,56 +1,62 @@
 package util;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+import item.*;
 
 public class GameObject {
     String name;
-    private final Set<GameObject> visibleKeys;
-    boolean hasKey;
+    private List<Item> items; 
     boolean visableKey;
-    boolean open;
+    boolean openAble;
+    private String asciiArt;
     
 
-    public GameObject(String name, boolean hasKey, boolean open) {
-        this.open = open;
+    public GameObject(String asciiArt, String name, boolean openAble) {
+        this.openAble = openAble;
         this.name = name;
-        this.hasKey = hasKey;
-        this.visibleKeys = new HashSet<>();
+        this.items = new ArrayList<>();
+        this.asciiArt = asciiArt;
+    }
 
+    public boolean isOpenable(){
+        return openAble;
     }
-    public boolean getOpen(){
-        return open;
-    }
+
     public String getName() {
         return name;
     }
 
-    public boolean isKeyVisible(GameObject obj) {
-        return visibleKeys.contains(obj);
+    public List<Item> getItems(){
+        return items;
     }
 
-    public boolean hasKey() {
-        return hasKey;
+    public void addItem(Item item) {
+        items.add(item);
     }
 
-    public void visableKey() {
-        this.visableKey = true;
-    }
-
-    public void removeKey() {
-        this.hasKey = false;
-    }
-
-    public void addVisibleKey(GameObject obj) {
-        if (obj.hasKey()) {
-            obj.visibleKeys.add(obj);
+    public Item getItembyName(String itemName) {
+        for (Item item : items) {
+            if (item.getName().equalsIgnoreCase(itemName)){
+                return item;
+            }
         }
+        return null;
+    }
+    
+    public String interact(){
+     return asciiArt;
     }
 
-    public void removeKey(GameObject obj) {
-        if (obj.visibleKeys.contains(obj)) {
-            visibleKeys.remove(obj);
-            obj.removeKey();
-        }
+    public boolean hasItem() {
+        return !items.isEmpty();
+    }
+    
+    public List<Item> getStoredItem() {
+        return items; 
+    }
+
+    public void removeItem(Item item) {
+        items.remove(item);
     }
 }

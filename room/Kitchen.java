@@ -1,6 +1,7 @@
 package room;
 
 import util.GameObject;
+import util.printUtil;
 
 public class Kitchen extends Room {
     public Kitchen(){
@@ -9,8 +10,10 @@ public class Kitchen extends Room {
 
     @Override
     protected void createObjects(){
-        getObjectManager().addObject(new GameObject("oven", false, true));
-        getObjectManager().addObject(new GameObject("fridge", true, true));
-        getObjectManager().addObject(new GameObject("bench", false, false));
+        GameObject oven = new GameObject(printUtil.AsciiArt.OVEN_ASCII.getArt(), "oven", true);
+        GameObject fridge = new GameObject(printUtil.AsciiArt.FRIDGE_ASCII.getArt(), "fridge", true);
+
+        objectManager.addObject(fridge);
+        objectManager.addObject(oven);
     }
 }
