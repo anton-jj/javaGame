@@ -9,8 +9,8 @@ public class Kitchen extends Room {
 
     @Override
     protected void createObjects(){
-        getObjectManager().addObject(new GameObject("oven", false, true));
-        getObjectManager().addObject(new GameObject("fridge", true, true));
-        getObjectManager().addObject(new GameObject("bench", false, false));
+        getObjectManager().addObject(new GameObject("oven",  true));
+        getObjectManager().addObject(new GameObject("fridge",  true));
+        getObjectManager().addObject(new GameObject("bench",  false));
     }
 }

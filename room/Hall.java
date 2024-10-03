@@ -7,8 +7,8 @@ public class Hall extends Room {
     }
     @Override
     protected void createObjects(){
-        getObjectManager().addObject(new GameObject("carpet", false, false));
-        getObjectManager().addObject(new GameObject("paintin", true, false));
-        getObjectManager().addObject(new GameObject("chest", false, true));
+        getObjectManager().addObject(new GameObject("carpet", false));
+        getObjectManager().addObject(new GameObject("paintin", false));
+        getObjectManager().addObject(new GameObject("chest", true));
     }
 }

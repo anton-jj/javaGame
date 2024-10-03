@@ -9,8 +9,8 @@ public class LivingRoom  extends Room{
 
     @Override
     protected void createObjects(){
-        getObjectManager().addObject(new GameObject("table", false, false));
-        getObjectManager().addObject(new GameObject("couch", false, false));
-        getObjectManager().addObject(new GameObject("lamp", false, false));
+        getObjectManager().addObject(new GameObject("table",  false));
+        getObjectManager().addObject(new GameObject("couch",  false));
+        getObjectManager().addObject(new GameObject("lamp",  false));
     }
 }
