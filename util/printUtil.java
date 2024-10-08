@@ -247,10 +247,10 @@ public class printUtil {
         GHOST_TALK_4("You can look around to find things."),
 
         // Hjälpmeddelande
-        HELP_MESSAGE("""
+        MENU_MESSAGE("""
                 Here's some advice:
                 1. Use 'look' to see what's around you.
-                2. Type 'move <direction>' to navigate to a new room.
+                2. Type 'menu' to show this menu.
                 3. Don't forget to 'talk' to me for more tips!
                 4. Use 'go' to move to a diffrent room
                 5. Use 'open' or 'search' to find keys from objects
