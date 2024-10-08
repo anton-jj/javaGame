@@ -1,8 +1,7 @@
 package player;
 
-import java.util.ArrayList;
-
 import item.Item;
+import java.util.ArrayList;
 import room.Room;
 import util.GameObject;
 import util.ObjectManager;

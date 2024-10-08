@@ -2,7 +2,6 @@ package game;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import npc.FriendlyGhost;
 import player.Player;
 import room.Hall;
@@ -10,6 +9,7 @@ import room.Kitchen;
 import room.LivingRoom;
 import room.Room;
 import room.WashRoom;
+import util.printUtil;
 
 public class Game {
     private final Player player;
@@ -43,6 +43,7 @@ public class Game {
 
     public void start() {
         boolean playing = true;
+        System.out.println(printUtil.GameMessages.MENU_MESSAGE.getMessage());
         while (player.getKeyCount() != 2 && playing) {
 
             String[] parts = handleINput();
@@ -53,8 +54,8 @@ public class Game {
                 case "open":
                     player.open(argument);
                     break;
-                case "help":
-                    friendlyGhost.provideHelp();
+                case "menu":
+                    System.out.println(printUtil.GameMessages.MENU_MESSAGE.getMessage());
                     break;
                 case "pickup":
                     player.pickup(argument);
@@ -78,6 +79,7 @@ public class Game {
                     System.out.println("Not valid command: " + command);
                     break;
             }
+            System.out.println();
         }
     }
     private String[] handleINput(){

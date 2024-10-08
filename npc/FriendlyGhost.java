@@ -1,9 +1,8 @@
 package npc;
 
+import game.Game;
 import java.util.Random;
 import java.util.Scanner;
-
-import game.Game;
 import room.Room;
 import util.printUtil;
 
@@ -23,25 +22,21 @@ public class FriendlyGhost extends Npc {
         while(showMenu) {
             System.out.println("""
                     What would you like to do?
-                    1. help
-                    2. map
-                    3. talk
-                    4. exit menu
+                    1. map
+                    2. talk
+                    3. exit menu
                     """);
             
                     Scanner scanner = new Scanner(System.in);
                     String choice = scanner.nextLine();
                     switch(choice){
                         case "1":
-                        provideHelp();
-                        break;
-                        case "2":
                         showMap();
                         break;
-                        case "3":
+                        case "2":
                         interact();
                         break;
-                        case "4":
+                        case "3":
                             showMenu = false;
                         break;
                         default:
@@ -69,12 +64,9 @@ public class FriendlyGhost extends Npc {
         }
     }
     private void showMap(){
-        System.out.println("You are now in " + game.getPlayer().getCurentRoom());
+        System.out.println("You are now in the" + game.getPlayer().getCurentRoom().getName());
         for (Room room : game.getRooms()) {
            System.out.println(room.getName());
         }
-    }
-    public void provideHelp() {
-        printUtil.frame(printUtil.GameMessages.HELP_MESSAGE.getMessage());
     }
 }
