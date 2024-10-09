@@ -1,0 +1,68 @@
+# Gradle files
+.gradle/
+build/
+
+# Ignore Gradle Wrapper JARs
+**/gradle-wrapper.jar
+
+# Ignore Gradle Wrapper properties
+**/gradle-wrapper.properties
+
+# Ignore Eclipse project files
+.project
+.classpath
+.settings/
+
+# Ignore IntelliJ IDEA project files
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# Ignore VS Code project files
+.vscode/
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore JetBrains system files
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Ignore macOS Finder generated files
+.DS_Store
+
+# Ignore Linux file system file
+*.lock
+
+# Ignore Windows file system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore Java compiled output
+*.class
+
+# Ignore packaged files (e.g., JARs, WARs)
+*.jar
+*.war
+*.ear
+
+# Ignore log files
+*.log
+
+# Ignore temporary files created by text editors or OS
+*.tmp
+*.swp
+*~.*
